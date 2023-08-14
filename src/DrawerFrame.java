@@ -21,7 +21,14 @@ public class DrawerFrame extends JFrame {
         JMenuItem newFile = new JMenuItem("새 파일(N)");
         fileMenu.add(newFile);
         newFile.addActionListener(
-                e -> System.out.println("새 파일(N)")
+            e -> System.out.println("새 파일(N)")//람다 익스프레션으로 만든것
+            /*
+            new ActionListener(){
+                public void actionPerformed(ActionEvent e){
+                    System.out.println("새파일(N)");
+                }
+            }
+            */
         );
 
         JMenuItem openFile = new JMenuItem("열기(O)");
@@ -36,15 +43,15 @@ public class DrawerFrame extends JFrame {
         JMenuItem exit = new JMenuItem("종료(N)");
         fileMenu.add(exit);
         exit.addActionListener(
-                e -> System.exit(0)//람다 익스프레션으로 만든것
-                /*
-                어나니머스 오브젝트로 만든거
-                new ActionListener() {
-                    public void actionPerformed(ActionEvent e) {
-                        System.exit(0);
-                    }
+            e -> System.exit(0)//람다 익스프레션으로 만든것
+            /*
+            어나니머스 오브젝트로 만든거
+            new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+                    System.exit(0);
                 }
-                */
+            }
+            */
         );
         setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
